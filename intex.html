@@ -1,0 +1,1076 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Conecta UABC | Bienestar académico</title>
+
+<meta name="description" content="Información y recursos para prevenir el estrés académico, mejorar la organización y promover el bienestar universitario.">
+
+<style>
+:root {
+  --azul: #173b65;
+  --azul-oscuro: #102b4a;
+  --azul-claro: #eaf1f7;
+  --blanco: #ffffff;
+  --fondo: #f6f8fa;
+  --texto: #253344;
+  --gris: #64748b;
+  --borde: #dce4eb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--fondo);
+  color: var(--texto);
+  line-height: 1.7;
+}
+
+a {
+  color: var(--azul);
+}
+
+img {
+  max-width: 100%;
+}
+
+.contenedor {
+  max-width: 1120px;
+  margin: auto;
+  padding: 0 24px;
+}
+
+section {
+  padding: 75px 0;
+  scroll-margin-top: 90px;
+}
+
+h1, h2, h3 {
+  line-height: 1.3;
+}
+
+h2 {
+  font-size: clamp(27px, 4vw, 37px);
+  color: var(--azul-oscuro);
+  margin: 0 0 20px;
+}
+
+p {
+  color: #526173;
+}
+
+.subtitulo {
+  max-width: 760px;
+  margin-bottom: 35px;
+}
+
+.etiqueta {
+  display: inline-block;
+  color: var(--azul);
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+}
+
+/* ENCABEZADO */
+
+header {
+  background: white;
+  border-bottom: 1px solid var(--borde);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.barra {
+  max-width: 1200px;
+  margin: auto;
+  padding: 12px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--azul-oscuro);
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.marca img {
+  width: 62px;
+  height: 62px;
+  object-fit: contain;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 19px;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: bold;
+  color: var(--texto);
+}
+
+nav a:hover {
+  color: #3477ad;
+}
+
+/* PORTADA */
+
+.hero {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(10, 34, 61, .94),
+      rgba(10, 34, 61, .70)
+    ),
+    url("assets/uabc.jpg");
+
+  background-position: center;
+  background-size: cover;
+  min-height: 550px;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.hero .contenedor {
+  width: 100%;
+}
+
+.hero-contenido {
+  max-width: 680px;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 5vw, 61px);
+  margin: 12px 0 22px;
+}
+
+.hero p {
+  color: #eef3f8;
+  font-size: 18px;
+}
+
+.hero .etiqueta {
+  color: #d7e8f5;
+}
+
+.boton {
+  display: inline-block;
+  background: var(--azul);
+  color: white;
+  padding: 13px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.boton:hover {
+  background: #285f93;
+}
+
+.hero .boton {
+  background: white;
+  color: var(--azul-oscuro);
+}
+
+/* TARJETAS */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.tarjeta {
+  background: white;
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  padding: 28px;
+}
+
+.tarjeta h3 {
+  color: var(--azul-oscuro);
+  font-size: 20px;
+  margin-top: 0;
+}
+
+.tarjeta p {
+  margin-bottom: 0;
+}
+
+.fondo-blanco {
+  background: white;
+}
+
+.fondo-azul {
+  background: var(--azul-claro);
+}
+
+.nota {
+  background: #eef3f7;
+  border-left: 4px solid var(--azul);
+  padding: 20px 24px;
+  margin-top: 30px;
+  border-radius: 0 7px 7px 0;
+}
+
+.nota p {
+  margin: 0;
+}
+
+/* DATOS */
+
+.datos {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 35px;
+  align-items: center;
+}
+
+.grafica {
+  background: white;
+  border: 1px solid var(--borde);
+  padding: 18px;
+  border-radius: 10px;
+}
+
+.grafica img {
+  width: 100%;
+  display: block;
+}
+
+.dato {
+  padding: 17px 0;
+  border-bottom: 1px solid var(--borde);
+}
+
+.dato strong {
+  font-size: 27px;
+  color: var(--azul);
+  display: block;
+}
+
+.dato span {
+  color: var(--gris);
+  font-size: 14px;
+}
+
+/* RECOMENDACIONES */
+
+.pasos {
+  counter-reset: pasos;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.paso {
+  background: white;
+  padding: 25px;
+  border: 1px solid var(--borde);
+  border-radius: 9px;
+}
+
+.paso::before {
+  counter-increment: pasos;
+  content: "0" counter(pasos);
+  display: block;
+  font-size: 25px;
+  font-weight: bold;
+  color: var(--azul);
+  margin-bottom: 10px;
+}
+
+.paso h3 {
+  margin: 0 0 8px;
+}
+
+.paso p {
+  margin: 0;
+}
+
+/* VIDEO */
+
+.video {
+  width: 100%;
+  max-width: 900px;
+  margin: 30px auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #102b4a;
+}
+
+.video iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* HERRAMIENTAS */
+
+.enlace {
+  display: inline-block;
+  margin-top: 15px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.enlace:hover {
+  text-decoration: underline;
+}
+
+/* REFERENCIAS */
+
+.referencias {
+  padding-left: 22px;
+  overflow-wrap: anywhere;
+}
+
+.referencias li {
+  margin-bottom: 18px;
+}
+
+/* PIE DE PÁGINA */
+
+footer {
+  background: var(--azul-oscuro);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+footer p {
+  color: #d2dfeb;
+}
+
+/* CELULARES */
+
+@media(max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .datos {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media(max-width: 650px) {
+  .barra {
+    flex-direction: column;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  section {
+    padding: 55px 0;
+  }
+
+  .hero {
+    min-height: 490px;
+  }
+
+  .hero h1 {
+    font-size: 37px;
+  }
+
+  .grid, .pasos {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ENCABEZADO -->
+
+<header>
+  <div class="barra">
+
+    <a href="#inicio" class="marca">
+      <img src="assets/cimarron.png" alt="Logo del cimarrón">
+      <span>Conecta UABC</span>
+    </a>
+
+    <nav aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#problema">Problemática</a>
+      <a href="#datos">Datos</a>
+      <a href="#prevencion">Prevención</a>
+      <a href="#recursos">Recursos</a>
+      <a href="#apoyo">Apoyo</a>
+      <a href="#referencias">Referencias</a>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+
+<!-- INICIO -->
+
+<section class="hero" id="inicio">
+  <div class="contenedor">
+    <div class="hero-contenido">
+
+      <span class="etiqueta">
+        Bienestar y desarrollo universitario
+      </span>
+
+      <h1>
+        Tu bienestar también
+        es parte de tu formación.
+      </h1>
+
+      <p>
+        Conecta UABC es un proyecto informativo
+        que busca promover la salud emocional,
+        la prevención del estrés académico
+        y la organización de las actividades
+        universitarias.
+      </p>
+
+      <a href="#problema" class="boton">
+        Conocer el proyecto
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- PRESENTACIÓN -->
+
+<section id="presentacion" class="fondo-blanco">
+  <div class="contenedor">
+
+    <span class="etiqueta">Presentación</span>
+    <h2>¿Qué es Conecta UABC?</h2>
+
+    <p>
+      Es una iniciativa académica dirigida a
+      estudiantes universitarios que proporciona
+      información y herramientas para comprender
+      los efectos del estrés y mejorar los hábitos
+      de estudio.
+    </p>
+
+    <p>
+      Su finalidad es impulsar una comunidad
+      estudiantil más informada, organizada
+      y consciente de la importancia de
+      cuidar su bienestar físico y emocional.
+    </p>
+
+    <div class="grid" style="margin-top:35px">
+
+      <article class="tarjeta">
+        <h3>Misión</h3>
+        <p>
+          Compartir información confiable y
+          estrategias prácticas para favorecer
+          el bienestar académico.
+        </p>
+      </article>
+
+      <article class="tarjeta">
+        <h3>Visión</h3>
+        <p>
+          Contribuir a una cultura universitaria
+          que valore tanto el aprendizaje como
+          la salud emocional.
+        </p>
+      </article>
+
+      <article class="tarjeta">
+        <h3>Objetivo</h3>
+        <p>
+          Facilitar el acceso a recursos
+          educativos, técnicas de organización
+          y servicios de orientación.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEMÁTICA -->
+
+<section id="problema">
+  <div class="contenedor">
+
+    <span class="etiqueta">Problemática</span>
+    <h2>El estrés y el agotamiento académico</h2>
+
+    <p class="subtitulo">
+      Las exigencias de la educación superior
+      pueden representar un desafío cuando
+      se combinan con responsabilidades
+      personales, laborales y familiares.
+    </p>
+
+    <div class="grid">
+
+      <article class="tarjeta">
+        <h3>Estrés académico</h3>
+        <p>
+          Es una respuesta que puede surgir
+          ante las demandas escolares,
+          especialmente cuando el estudiante
+          percibe que no cuenta con tiempo
+          o recursos suficientes para atenderlas.
+        </p>
+      </article>
+
+      <article class="tarjeta">
+        <h3>Ansiedad</h3>
+        <p>
+          La preocupación persistente por
+          exámenes, calificaciones y entregas
+          puede afectar la concentración,
+          el sueño y la vida cotidiana.
+        </p>
+      </article>
+
+      <article class="tarjeta">
+        <h3>Agotamiento académico</h3>
+        <p>
+          El burnout académico se relaciona
+          con agotamiento, distanciamiento
+          respecto a los estudios y una
+          menor percepción de eficacia académica.
+        </p>
+      </article>
+
+    </div>
+
+    <div class="nota">
+      <p>
+        <strong>¿Por qué es importante?</strong>
+        El estrés persistente puede afectar
+        el bienestar, la calidad del descanso,
+        la motivación y el desempeño escolar.
+        Reconocer las señales permite buscar
+        apoyo y realizar cambios oportunos.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- DATOS -->
+
+<section id="datos" class="fondo-azul">
+  <div class="contenedor">
+
+    <span class="etiqueta">Análisis de datos</span>
+    <h2>Niveles de burnout académico</h2>
+
+    <p class="subtitulo">
+      La siguiente gráfica presenta una
+      distribución porcentual de niveles
+      de burnout en hombres y mujeres,
+      de acuerdo con el material proporcionado
+      para este proyecto.
+    </p>
+
+    <div class="datos">
+
+      <div class="grafica">
+        <img
+          src="assets/estresuabc.png"
+          alt="Gráfica de niveles de burnout por sexo: leve, moderado y profundo">
+      </div>
+
+      <div>
+
+        <div class="dato">
+          <strong>62.50%</strong>
+          <span>
+            Hombres con nivel leve de burnout
+          </span>
+        </div>
+
+        <div class="dato">
+          <strong>80.51%</strong>
+          <span>
+            Mujeres con nivel leve de burnout
+          </span>
+        </div>
+
+        <div class="dato">
+          <strong>37.50%</strong>
+          <span>
+            Hombres con nivel moderado
+          </span>
+        </div>
+
+        <div class="dato">
+          <strong>18.18%</strong>
+          <span>
+            Mujeres con nivel moderado
+          </span>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="nota">
+      <p>
+        <strong>Interpretación:</strong>
+        En la gráfica predomina el nivel leve
+        de burnout en ambos grupos. El nivel
+        moderado es mayor entre los hombres
+        de la muestra presentada.
+
+        Los datos no permiten establecer
+        conclusiones generales sobre toda
+        la población estudiantil de la UABC.
+      </p>
+    </div>
+
+    <p>
+      <small>
+        Fuente: gráfica proporcionada para
+        el proyecto. Autor, año, tamaño de
+        muestra y metodología no especificados.
+      </small>
+    </p>
+
+  </div>
+</section>
+
+<!-- CONSECUENCIAS -->
+
+<section id="consecuencias" class="fondo-blanco">
+  <div class="contenedor">
+
+    <span class="etiqueta">Consecuencias</span>
+    <h2>¿Cómo puede afectar al estudiante?</h2>
+
+    <div class="grid">
+
+      <article class="tarjeta">
+        <h3>Rendimiento académico</h3>
+        <p>
+          Dificultades de atención,
+          concentración y cumplimiento
+          de actividades.
+        </p>
+      </article>
+
+      <article class="tarjeta">
+        <h3>Salud física</h3>
+        <p>
+          Problemas de sueño, cansancio,
+          tensión muscular y otros
+          síntomas relacionados con el estrés.
+        </p>
+      </article>
+
+      <article class="tarjeta">
+        <h3>Bienestar emocional</h3>
+        <p>
+          Irritabilidad, desmotivación,
+          preocupación frecuente y
+          sensación de agotamiento.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- PREVENCIÓN -->
+
+<section id="prevencion">
+  <div class="contenedor">
+
+    <span class="etiqueta">Prevención</span>
+    <h2>Estrategias para una vida académica equilibrada</h2>
+
+    <p class="subtitulo">
+      La prevención del estrés requiere
+      hábitos sostenibles y una organización
+      realista de las responsabilidades.
+    </p>
+
+    <div class="pasos">
+
+      <article class="paso">
+        <h3>Organizar las actividades</h3>
+        <p>
+          Utilizar una agenda para registrar
+          fechas de entrega, exámenes y
+          compromisos personales.
+        </p>
+      </article>
+
+      <article class="paso">
+        <h3>Establecer prioridades</h3>
+        <p>
+          Identificar las actividades
+          importantes y dividir los trabajos
+          extensos en tareas pequeñas.
+        </p>
+      </article>
+
+      <article class="paso">
+        <h3>Respetar los descansos</h3>
+        <p>
+          Alternar periodos de estudio con
+          pausas breves y mantener horarios
+          regulares de sueño.
+        </p>
+      </article>
+
+      <article class="paso">
+        <h3>Solicitar apoyo</h3>
+        <p>
+          Acudir a docentes, tutores,
+          orientadores o profesionales
+          cuando las dificultades afecten
+          el bienestar cotidiano.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- VIDEO -->
+
+<section id="recursos" class="fondo-azul">
+  <div class="contenedor">
+
+    <span class="etiqueta">Recurso audiovisual</span>
+    <h2>Material para reflexionar</h2>
+
+    <p>
+      Este video complementa los materiales
+      educativos del proyecto y permite
+      profundizar en la reflexión sobre
+      la vida académica y el bienestar.
+    </p>
+
+    <div class="video">
+      <iframe
+        src="https://www.youtube.com/embed/ujylPaOPGFE"
+        title="Recurso audiovisual de Conecta UABC"
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <p>
+      <a
+        href="https://youtu.be/ujylPaOPGFE"
+        target="_blank"
+        rel="noopener noreferrer">
+        Ver el video directamente en YouTube
+      </a>
+    </p>
+
+  </div>
+</section>
+
+<!-- HERRAMIENTAS -->
+
+<section id="herramientas" class="fondo-blanco">
+  <div class="contenedor">
+
+    <span class="etiqueta">Recursos digitales</span>
+    <h2>Herramientas para la organización académica</h2>
+
+    <div class="grid">
+
+      <article class="tarjeta">
+        <h3>Google Calendar</h3>
+        <p>
+          Permite programar actividades,
+          exámenes y recordatorios.
+        </p>
+        <a class="enlace"
+          href="https://calendar.google.com"
+          target="_blank"
+          rel="noopener noreferrer">
+          Acceder a Calendar
+        </a>
+      </article>
+
+      <article class="tarjeta">
+        <h3>Google Drive</h3>
+        <p>
+          Facilita el almacenamiento
+          y la colaboración en documentos.
+        </p>
+        <a class="enlace"
+          href="https://drive.google.com"
+          target="_blank"
+          rel="noopener noreferrer">
+          Acceder a Drive
+        </a>
+      </article>
+
+      <article class="tarjeta">
+        <h3>Blackboard</h3>
+        <p>
+          Plataforma para consultar
+          materiales y actividades académicas.
+        </p>
+        <a class="enlace"
+          href="https://uabc.blackboard.com"
+          target="_blank"
+          rel="noopener noreferrer">
+          Acceder a Blackboard
+        </a>
+      </article>
+
+      <article class="tarjeta">
+        <h3>Google Meet</h3>
+        <p>
+          Facilita reuniones virtuales
+          y trabajos colaborativos.
+        </p>
+        <a class="enlace"
+          href="https://meet.google.com"
+          target="_blank"
+          rel="noopener noreferrer">
+          Acceder a Meet
+        </a>
+      </article>
+
+      <article class="tarjeta">
+        <h3>Google Académico</h3>
+        <p>
+          Permite buscar artículos
+          y publicaciones académicas.
+        </p>
+        <a class="enlace"
+          href="https://scholar.google.com"
+          target="_blank"
+          rel="noopener noreferrer">
+          Acceder al buscador
+        </a>
+      </article>
+
+      <article class="tarjeta">
+        <h3>Biblioteca UABC</h3>
+        <p>
+          Consulta los recursos bibliográficos
+          disponibles en la universidad.
+        </p>
+        <a class="enlace"
+          href="https://biblioteca.uabc.mx"
+          target="_blank"
+          rel="noopener noreferrer">
+          Consultar biblioteca
+        </a>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- APOYO -->
+
+<section id="apoyo">
+  <div class="contenedor">
+
+    <span class="etiqueta">Acompañamiento universitario</span>
+    <h2>Servicios de apoyo para estudiantes</h2>
+
+    <p class="subtitulo">
+      Buscar orientación es una medida
+      importante cuando las dificultades
+      académicas o emocionales comienzan
+      a afectar la vida cotidiana.
+    </p>
+
+    <div class="grid">
+
+      <article class="tarjeta">
+        <h3>Orientación psicológica</h3>
+        <p>
+          Consulta los servicios de
+          orientación y acompañamiento
+          disponibles en tu campus.
+        </p>
+      </article>
+
+      <article class="tarjeta">
+        <h3>Tutorías académicas</h3>
+        <p>
+          Acude a tu tutor o coordinación
+          para recibir orientación sobre
+          dificultades escolares.
+        </p>
+      </article>
+
+      <article class="tarjeta">
+        <h3>Orientación educativa</h3>
+        <p>
+          Solicita información sobre
+          hábitos de estudio, adaptación
+          universitaria y recursos de apoyo.
+        </p>
+      </article>
+
+    </div>
+
+    <a class="boton"
+      href="https://bienestar.uabc.mx/directorioOrientadores/tijuana"
+      target="_blank"
+      rel="noopener noreferrer">
+      Consultar directorio de orientación UABC
+    </a>
+
+    <div class="nota">
+      <p>
+        Esta página ofrece información general
+        y no sustituye una evaluación profesional.
+        Si el malestar es persistente o intenso,
+        solicita atención adecuada.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- REFERENCIAS -->
+
+<section id="referencias" class="fondo-blanco">
+  <div class="contenedor">
+
+    <span class="etiqueta">Fuentes de información</span>
+    <h2>Referencias bibliográficas</h2>
+
+    <ol class="referencias">
+
+      <li>
+        Organización Mundial de la Salud.
+        (2023).
+        <em>Estrés.</em>
+        <a
+          href="https://www.who.int/es/news-room/questions-and-answers/item/stress"
+          target="_blank"
+          rel="noopener noreferrer">
+          https://www.who.int/es/news-room/questions-and-answers/item/stress
+        </a>
+      </li>
+
+      <li>
+        Organización Mundial de la Salud.
+        (2024).
+        <em>La salud mental de los adolescentes.</em>
+        <a
+          href="https://www.who.int/es/news-room/fact-sheets/detail/adolescent-mental-health"
+          target="_blank"
+          rel="noopener noreferrer">
+          Consultar fuente
+        </a>
+      </li>
+
+      <li>
+        Universidad Autónoma de Baja California.
+        (s. f.).
+        <em>Portal institucional.</em>
+        <a
+          href="https://www.uabc.mx"
+          target="_blank"
+          rel="noopener noreferrer">
+          https://www.uabc.mx
+        </a>
+      </li>
+
+      <li>
+        Universidad Autónoma de Baja California.
+        (s. f.).
+        <em>Directorio de orientadores educativos:
+        Tijuana.</em>
+        <a
+          href="https://bienestar.uabc.mx/directorioOrientadores/tijuana"
+          target="_blank"
+          rel="noopener noreferrer">
+          Consultar directorio
+        </a>
+      </li>
+
+      <li>
+        <em>Gráfica de niveles de burnout
+        por sexo.</em> (s. f.).
+        Material proporcionado para el proyecto
+        Conecta UABC. Autor y fuente original
+        pendientes de identificación.
+      </li>
+
+      <li>
+        <em>Recurso audiovisual del proyecto.</em>
+        (s. f.). YouTube.
+        <a
+          href="https://youtu.be/ujylPaOPGFE"
+          target="_blank"
+          rel="noopener noreferrer">
+          https://youtu.be/ujylPaOPGFE
+        </a>
+      </li>
+
+    </ol>
+
+  </div>
+</section>
+
+</main>
+
+<!-- PIE DE PÁGINA -->
+
+<footer>
+  <h3>Conecta UABC</h3>
+
+  <p>
+    Información, prevención y bienestar
+    para la comunidad estudiantil.
+  </p>
+
+
+  <p>2026 | Conecta UABC</p>
+</footer>
+
+</body>
+</html>
